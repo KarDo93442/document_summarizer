@@ -9,14 +9,14 @@ The system inputs a user's question related to the system's knowledge base and o
 * can store knowledge base on the disk (coming soon)
 
 ## Purpose
-The goal of this project is to simplify the process of finding and extracting information from text documents. Main intend of the procject for me, the author, is to us for accelarating learning in collage.
+The goal of this project is to simplify the process of finding and extracting information from text documents. Main intend of the procject for me, the author, is to accelarate learning and save time in collage.
 
 
 ## Installation guide
 It is recommended to create a virtual environmnet to run this project.
 
-For conda:
-```bash conda create -f document_summarizer```
+For conda: 
+```conda create -n document_summarizer python pip```
 
 
 ## Usage instructions
