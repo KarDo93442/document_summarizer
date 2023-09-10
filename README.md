@@ -13,16 +13,22 @@ The goal of this project is to simplify the process of finding and extracting in
 
 
 ## Installation guide
-It is recommended to create a virtual environmnet to run this project.
+It is recommended to create a virtual environment to run this project.
 
 For conda: 
 ```conda create -n document_summarizer python pip```
+
+For python: 
+```python -m venv /path/to/the/environment```
+
+Then install the required libraries by running
+```pip install -r requirements.txt```
 
 
 ## Usage instructions
 
 
 ## License
-* Python
-* Langchain
+* Python 3.11.4
+* Langchain 0.0.285
 
