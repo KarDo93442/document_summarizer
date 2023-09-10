@@ -21,6 +21,13 @@ For conda:
 
 ## Usage instructions
 
+### For jupyter (example results without running the program)
+
+### For cli
+
+### For webapp
+
+
 
 ## License
 * Python
