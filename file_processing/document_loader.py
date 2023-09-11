@@ -1,4 +1,7 @@
+import os
 from typing import List
+
+from tqdm import tqdm
 
 from langchain.schema.document import Document
 from langchain.document_loaders import TextLoader
@@ -10,11 +13,19 @@ from preprocess_configs import *
 
 class DocumentLoader:
     def preprocess_file(filename: str) -> List[Document]:
-        loader = TextLoader(KB_FILEPATH)
-        textsplitter = CharacterTextSplitter(
-            separator=separators, chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP
-        )
-        docs: List[Document] = loader.load_and_split(textsplitter)
+        if filename.lower().endswith(".txt"):
+            loader = TextLoader(file_path=filename)
+            textsplitter = CharacterTextSplitter(
+                separator=separators, chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP
+            )
+            docs: List[Document] = loader.load_and_split(text_splitter=textsplitter)
+
+        elif filename.lower().endswith(".pdf"):
+            loader = PyPDFLoader(file_path=filename)
+            textsplitter = CharacterTextSplitter(
+                separator=separators, chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP
+            )
+            docs = loader.load_and_split(text_splitter=textsplitter)
 
         return docs
 
