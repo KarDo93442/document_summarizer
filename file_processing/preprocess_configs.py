@@ -14,3 +14,4 @@ EMBEDDING_DEVICE = (
     if torch.backends.mps.is_available()
     else "cpu"
 )
+CACHE_FOLDER = "~/.cache/huggingface/"
